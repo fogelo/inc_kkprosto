@@ -1,8 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react';  // библиотека которая позволяет создавать компоненты (функции с jsx внутри)
+import ReactDOM from 'react-dom'; //библиотека, которая позволяет отрисовывать компоненты в браузере (чтобы jsx превращался в html)
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import App from "./App";
 
 ReactDOM.render(
   <React.StrictMode>
