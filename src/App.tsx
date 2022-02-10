@@ -1,17 +1,20 @@
 import React from 'react';
 import './App.css';
-import Accordion from "./components/Accordion/Accordion";
-import {Rating} from "./components/Rating/Rating";
+import Accordion from './components/Accordion/Accordion';
+import {Rating} from './components/Rating/Rating';
+import OnOff from './OnOff/OnOff';
 
 //компоненты - это функции, их вызывает реакт, чтобы от них получить jsx разметку, которую он потом отрисовывает
 //компонента ждет входные данные (props), чтобы отрисовать по разному jsx
-//исользуя typescript там где лежит компонента всегда создаем тайпскриптовый тип
+//используя typescript там где лежит компонента всегда создаем тайпскриптовый тип
 
 function App() {
     //полезное что-то
     console.log('App rendering')
 
     //обязана вернуть JSX
+
+
     return (
         <div className="App">
             <PageTitle title={'this is APP component'}/>
@@ -24,6 +27,7 @@ function App() {
             <Rating value={5}/>
             <Accordion title={'menu'} collapsed={true}/>
             <Accordion title={'users'} collapsed={false}/>
+            <OnOff/>
         </div>
     );
 }
