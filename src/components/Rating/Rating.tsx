@@ -11,7 +11,7 @@ export function Rating(props: RatingPropsType) {
 
     return (
         <div>
-            <Star selected={props.value > 0}/>OnOf.tsx
+            <Star selected={props.value > 0}/>
             <Star selected={props.value > 1}/>
             <Star selected={props.value > 2}/>
             <Star selected={props.value > 3}/>
