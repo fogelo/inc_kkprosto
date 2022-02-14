@@ -4,6 +4,7 @@ import Accordion from './components/Accordion/Accordion';
 import {Rating} from './components/Rating/Rating';
 import {OnOffD, OnOffMy} from './components/OnOff/OnOff';
 import {UncontrolledAccordion} from './components/UncontrolledAccordion/UncontrolledAccordion';
+import {UncontrolledRating} from './components/UncontrolledRating/UncontrolledRating';
 
 //компоненты - это функции, их вызывает реакт, чтобы от них получить jsx разметку, которую он потом отрисовывает
 //компонента ждет входные данные (props), чтобы отрисовать по разному jsx
@@ -28,9 +29,12 @@ function App() {
             <Rating value={5}/>
             <Accordion title={'menu'} collapsed={true}/>
             <Accordion title={'users'} collapsed={false}/>
+
             <OnOffMy/>
             <OnOffD/>
+
             <UncontrolledAccordion/>
+            <UncontrolledRating/>
 
         </div>
     );

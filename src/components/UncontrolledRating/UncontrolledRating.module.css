@@ -1,0 +1,7 @@
+.uncontrolledRating {
+    display: flex;
+}
+
+.uncontrolledRating > * {
+    margin-left: 5px;
+}

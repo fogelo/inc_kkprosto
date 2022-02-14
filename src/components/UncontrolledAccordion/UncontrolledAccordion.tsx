@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 
 export const UncontrolledAccordion = () => {
-    let [collapsed, setCollapsed] = useState(true)
+    const [collapsed, setCollapsed] = useState(false)
     const wrapperStyle = {
         display: 'flex',
         alignItems: 'center',
