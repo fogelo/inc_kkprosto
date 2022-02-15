@@ -10,25 +10,27 @@ export const UncontrolledAccordion = () => {
     return (
         <div>
             <div style={wrapperStyle}>
-                <AccordionTitle/>
-                <button onClick={()=>setCollapsed(!collapsed)}>toggle</button>
+                <AccordionTitle collapsed={collapsed} setCollapsed={setCollapsed}/>
             </div>
             {collapsed && <AccordionBody/>}
         </div>
     );
 };
 
-function AccordionTitle() {
-    console.log('AccordionTitle rendering')
+type AccordionTitlePropsType = {
+    setCollapsed: (collapsed: boolean) => void
+    collapsed: boolean
+}
+
+function AccordionTitle(props: AccordionTitlePropsType) {
     return (
-        <div>
+        <div onClick={() => props.setCollapsed(!props.collapsed)}>
             <h3>Accordion</h3>
         </div>
     )
 }
 
 function AccordionBody() {
-    console.log('AccordionBody rendering')
     return (
         <div>
             <ul>

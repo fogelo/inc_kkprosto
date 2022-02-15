@@ -1,5 +1,6 @@
 .uncontrolledRating {
     display: flex;
+    justify-content: center;
 }
 
 .uncontrolledRating > * {
