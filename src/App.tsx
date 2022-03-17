@@ -1,6 +1,6 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
-import Accordion from './components/Accordion/Accordion';
+import {Accordion} from './components/Accordion/Accordion';
 import {Rating} from './components/Rating/Rating';
 import {OnOffD, OnOffMy} from './components/OnOff/OnOff';
 import {UncontrolledAccordion} from './components/UncontrolledAccordion/UncontrolledAccordion';
@@ -11,22 +11,13 @@ import {UncontrolledRating} from './components/UncontrolledRating/UncontrolledRa
 //используя typescript там где лежит компонента всегда создаем тайпскриптовый тип
 
 function App() {
-    //полезное что-то
-    console.log('App rendering')
-
-    //обязана вернуть JSX
-
-
+    const [value, setValue]= useState<0|1|2|3|4|5>(0)
     return (
         <div className="App">
             <PageTitle title={'this is APP component'}/>
             <PageTitle title={'My friends'}/>
-            <Rating value={0}/>
-            <Rating value={1}/>
-            <Rating value={2}/>
-            <Rating value={3}/>
-            <Rating value={4}/>
-            <Rating value={5}/>
+            <Rating value={value} setValue={setValue}/>
+
             <Accordion title={'menu'} collapsed={true}/>
             <Accordion title={'users'} collapsed={false}/>
 
