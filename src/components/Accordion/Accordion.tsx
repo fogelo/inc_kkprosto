@@ -1,18 +1,21 @@
 import React from 'react';
 
-type AccordionPropsType = {
+export type AccordionPropsType = {
+    /**
+     * Menu of accordion
+     */
     title: string
     collapsed: boolean
 }
 
 export function Accordion(props: AccordionPropsType) {
     console.log('Accordion rendering')
-     return (
-            <div>
-                <AccordionTitle title={props.title}/>
-                {!props.collapsed && <AccordionBody/>}
-            </div>
-        )
+    return (
+        <div>
+            <AccordionTitle title={props.title}/>
+            {!props.collapsed && <AccordionBody/>}
+        </div>
+    )
 }
 
 type AccordionTitlePropsType = {

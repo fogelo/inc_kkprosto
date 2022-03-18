@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
 
-import {Rating, RatingValueType} from './Rating';
+import {Rating, RatingPropsType, RatingValueType} from './Rating';
 import {action} from '@storybook/addon-actions';
+import {Story} from '@storybook/react';
 
 
 export default {
@@ -15,6 +16,7 @@ export const Rating2 = () => <Rating value={2} setValue={action('a star was clic
 export const Rating3 = () => <Rating value={3} setValue={action('a star was clicked ')}/>
 export const Rating4 = () => <Rating value={4} setValue={action('a star was clicked ')}/>
 export const Rating5 = () => <Rating value={5} setValue={action('a star was clicked ')}/>
+
 export const RatingChanging = () => {
     const [rating, setRating] = useState<RatingValueType>(0)
     return (
