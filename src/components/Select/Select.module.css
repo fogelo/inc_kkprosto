@@ -1,0 +1,15 @@
+.select {
+    border: 1px solid black;
+}
+
+.items {
+    border: 1px solid black;
+}
+
+.item {
+    background-color: #1ea7fd;
+}
+
+/*.item:hover {*/
+/*    background-color: #66bf3c;*/
+/*}*/
