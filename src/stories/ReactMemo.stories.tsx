@@ -5,7 +5,7 @@ export default {
 }
 
 
-const NewMessagessCounter = (props: { count: number }) => {
+const NewMessagesCounter = (props: { count: number }) => {
     return <div>{props.count}</div>
 }
 
@@ -24,7 +24,7 @@ export const Example1 = () => {
     return (
         <>
             <button onClick={() => setCounter(counter + 1)}>+</button>
-            <NewMessagessCounter count={counter}/>
+            <NewMessagesCounter count={counter}/>
             <UsersMemo users={users}/>
         </>
     )
