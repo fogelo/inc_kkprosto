@@ -24,8 +24,8 @@ function App() {
             <OnOffMy/>
             <OnOffD/>
 
-            <UncontrolledAccordion/>
             <UncontrolledRating/>
+            <UncontrolledAccordion/>
 
         </div>
     );

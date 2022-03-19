@@ -1,7 +1,12 @@
-import React, {useState} from 'react';
+import React, {useReducer} from 'react';
+import {reducer, TOGGLE_COLLAPSED} from './reducer';
+
 
 export const UncontrolledAccordion = () => {
-    const [collapsed, setCollapsed] = useState(false)
+    // const [collapsed, setCollapsed] = useState(false)
+    const [state, dispatch] = useReducer(reducer, {collapsed: false})
+
+
     const wrapperStyle = {
         display: 'flex',
         alignItems: 'center',
@@ -10,9 +15,9 @@ export const UncontrolledAccordion = () => {
     return (
         <div>
             <div style={wrapperStyle}>
-                <AccordionTitle collapsed={collapsed} setCollapsed={setCollapsed}/>
+                <AccordionTitle collapsed={state.collapsed} setCollapsed={() => dispatch({type: TOGGLE_COLLAPSED})}/>
             </div>
-            {collapsed && <AccordionBody/>}
+            {state.collapsed && <AccordionBody/>}
         </div>
     );
 };
